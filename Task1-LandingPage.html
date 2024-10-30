@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JM Hospital</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f9f9f7, #e1e4ee);
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: #1f0384;
+            padding: 15px 0;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: right;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        header nav a {
+            color: #f5f8fb;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #bca20c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(80deg, hsl(243, 96%, 35%), #ef9061);
+            color: #f5f8fb;
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h2 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .hero .btn {
+            background: #ffd700;
+            color: #1e4d6b;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background: #ffcc00;
+        }
+
+        /* About Section */
+        #about {
+            padding: 60px 0;
+            text-align: center;
+            background: #ffffff;
+        }
+
+        #about h2 {
+            color: #1e4d6b;
+            margin-bottom: 25px;
+            font-size: 2.3em;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Services Section */
+        #services {
+            padding: 60px 0;
+            text-align: center;
+            background: #f5f8fb;
+        }
+
+        #services h2 {
+            color: #1e4d6b;
+            margin-bottom: 25px;
+            font-size: 2.3em;
+        }
+
+        .service {
+            display: inline-block;
+            width: 28%;
+            margin: 20px;
+            padding: 25px;
+            background: #ffffff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service h3 {
+            color: #004d66;
+            font-size: 1.6em;
+            margin-bottom: 12px;
+        }
+
+        .service p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 1em;
+        }
+
+        /* Appointment Section */
+        #appointment {
+            padding: 60px 0;
+            text-align: center;
+            background: #1e4d6b;
+            color: #f5f8fb;
+        }
+
+        #appointment h2 {
+            font-size: 2.3em;
+            margin-bottom: 25px;
+        }
+
+        #appointment p {
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        #appointment .btn {
+            background: #ffd700;
+            color: #1e4d6b;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease;
+        }
+
+        #appointment .btn:hover {
+            background: #ffcc00;
+        }
+
+        /* Footer */
+        footer {
+            background: #004d66;
+            color: #f5f8fb;
+            text-align: center;
+            padding: 20px;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#appointment">Appointment</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to JM Hospital</h2>
+        <p>Committed to Providing Compassionate, High-Quality Care for Every Patient</p>
+        <br><a href="#appointment" class="btn">Book an Appointment</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2>About Us</h2>
+        <p>At JM Hospital, we are dedicated to delivering exceptional healthcare with compassion, respect, and a commitment to excellence. Our team of highly skilled professionals works around the clock to ensure that every patient receives the best care and treatment they need.</p>
+    </section>
+<br>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Cardiology</h3>
+                <p>Expert heart care services that focus on diagnosis, treatment, and prevention of heart conditions.</p>
+            </div>
+            <div class="service">
+                <h3>Orthopedics</h3>
+                <p>Comprehensive orthopedic services for bones, joints, and muscle health to keep you moving.</p>
+            </div>
+            <div class="service">
+                <h3>Pediatrics</h3>
+                <p>Complete care for children, from infants to adolescents, ensuring healthy development and well-being.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment">
+        <div class="container">
+            <h2>Book an Appointment</h2>
+            <p>Easy and convenient online booking for all patients. Start your journey to better health today!</p>
+            <a href="#contact" class="btn">Schedule Now</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 JM Hospital. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:contact@jmhospital.com">contact@jmhospital.com</a> | +1 (555) 123-4567</p>
+        </div>
+    </footer>
+</body>
+</html>
